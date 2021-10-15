@@ -203,11 +203,11 @@ P(lain) O(ld) J(ava) O(bject)
 
 ## hellospring 웹 애플리케이션 작성 실습 예제
 
-1. hellospring03 Maven 프로젝트 생성
+**1. hellospring03 Maven 프로젝트 생성**
 
 
 
-2. pom.xml 디펜던시 추가
+**2. pom.xml 디펜던시 추가**
 
 
 
@@ -252,7 +252,7 @@ P(lain) O(ld) J(ava) O(bject)
 
 
 
-3. web.xml에 서블릿맵핑추가 
+**3. web.xml에 서블릿맵핑추가 **
 
 
 
@@ -278,47 +278,30 @@ P(lain) O(ld) J(ava) O(bject)
 
 
 
-3. WEB-INF에 spring-sevlet.xml 파일생성 후 컨텍스트 설정
+**3. WEB-INF에 spring-sevlet.xml 파일생성 후 컨텍스트 설정**
+
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<beans
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.example.springex.controller" />
+
+	</beans>
 
 
 
-	**<?xml version="1.0" encoding="UTF-8"?>**
-
-	**<beans**
-
-	 **xmlns:xsi****="http://www.w3.org/2001/XMLSchema-instance"**
-
-	 **xmlns:aop****="http://www.springframework.org/schema/aop"**
-
-	 **xmlns****="http://www.springframework.org/schema/beans"**
-
-	 **xmlns:p****="http://www.springframework.org/schema/p"**
-
-	 **xmlns:context****="http://www.springframework.org/schema/context"**
-
-	 **xmlns:mvc****="http://www.springframework.org/schema/mvc"**
-
-	 **xsi:schemaLocation****="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd**
-
-	 **http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd**
-
-	 **http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd**
-
-	 **http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">**
-
-
-
-	 **<****context:annotation-config** **/>**
-
-	 **<****context:component-scan** **base-package="****com.example.springex.controller****" />**
-
-
-
-	**</beans>**
-
-
-
-4. 컨트롤러 패키지 안에 HelloController 클래스 생성
+**4. 컨트롤러 패키지 안에 HelloController 클래스 생성**
 
 
 
