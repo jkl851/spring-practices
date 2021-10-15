@@ -209,115 +209,114 @@ P(lain) O(ld) J(ava) O(bject)
 
 2. pom.xml 디펜던시 추가
 
-'''
 
-<dependency>
 
- <groupId>org.springframework</groupId>
+	<dependency>
 
- <artifactId>spring-context</artifactId>
+	 <groupId>org.springframework</groupId>
 
- <version>4.2.1.RELEASE</version>
+	 <artifactId>spring-context</artifactId>
 
-</dependency>
+	 <version>4.2.1.RELEASE</version>
 
-'''
+	</dependency>
 
-'''
 
-<dependency>
 
- <groupId>org.springframework</groupId>
 
- <artifactId>spring-web</artifactId>
+	<dependency>
 
- <version>4.2.1.RELEASE</version>
+	 <groupId>org.springframework</groupId>
 
-</dependency>
+	 <artifactId>spring-web</artifactId>
 
-'''
+	 <version>4.2.1.RELEASE</version>
 
-'''
+	</dependency>
 
-<dependency>
 
- <groupId>org.springframework</groupId>
 
- <artifactId>spring-webmvc</artifactId>
 
- <version>4.2.1.RELEASE</version>
 
-</dependency>
+	<dependency>
 
-'''
+	 <groupId>org.springframework</groupId>
+
+	 <artifactId>spring-webmvc</artifactId>
+
+	 <version>4.2.1.RELEASE</version>
+
+	</dependency>
+
+
 
 
 
 3. web.xml에 서블릿맵핑추가 
 
-'''
 
-<servlet>
 
- <servlet-name>spring</servlet-name>
+	<servlet>
 
- <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	 <servlet-name>spring</servlet-name>
 
-</servlet>
+	 <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 
- 
+	</servlet>
 
-<servlet-mapping>
 
- <servlet-name>spring</servlet-name>
 
- <url-pattern>/</url-pattern>
+	<servlet-mapping>
 
-</servlet-mapping>
+	 <servlet-name>spring</servlet-name>
 
-'''
+	 <url-pattern>/</url-pattern>
+
+	</servlet-mapping>
+
+
 
 
 
 3. WEB-INF에 spring-sevlet.xml 파일생성 후 컨텍스트 설정
 
-'''
-
-**<?xml version="1.0" encoding="UTF-8"?>**
-
-**<beans**
-
- **xmlns:xsi****="http://www.w3.org/2001/XMLSchema-instance"**
-
- **xmlns:aop****="http://www.springframework.org/schema/aop"**
-
- **xmlns****="http://www.springframework.org/schema/beans"**
-
- **xmlns:p****="http://www.springframework.org/schema/p"**
-
- **xmlns:context****="http://www.springframework.org/schema/context"**
-
- **xmlns:mvc****="http://www.springframework.org/schema/mvc"**
-
- **xsi:schemaLocation****="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd**
-
- **http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd**
-
- **http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd**
-
- **http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">**
 
 
+	**<?xml version="1.0" encoding="UTF-8"?>**
 
- **<****context:annotation-config** **/>**
+	**<beans**
 
- **<****context:component-scan** **base-package="****com.example.springex.controller****" />**
+	 **xmlns:xsi****="http://www.w3.org/2001/XMLSchema-instance"**
+
+	 **xmlns:aop****="http://www.springframework.org/schema/aop"**
+
+	 **xmlns****="http://www.springframework.org/schema/beans"**
+
+	 **xmlns:p****="http://www.springframework.org/schema/p"**
+
+	 **xmlns:context****="http://www.springframework.org/schema/context"**
+
+	 **xmlns:mvc****="http://www.springframework.org/schema/mvc"**
+
+	 **xsi:schemaLocation****="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd**
+
+	 **http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd**
+
+	 **http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd**
+
+	 **http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">**
 
 
 
-**</beans>**
+	 **<****context:annotation-config** **/>**
 
-'''
+	 **<****context:component-scan** **base-package="****com.example.springex.controller****" />**
+
+
+
+	**</beans>**
+
+
 
 4. 컨트롤러 패키지 안에 HelloController 클래스 생성
 
@@ -327,16 +326,17 @@ P(lain) O(ld) J(ava) O(bject)
 
 '''java
 
-package com.douzone.hellospring.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
+	package com.douzone.hellospring.controller;
 
-@Controller
-public class HelloController {
+	import org.springframework.stereotype.Controller;
+	import org.springframework.ui.Model;
+	import org.springframework.web.bind.annotation.RequestMapping;
+	import org.springframework.web.bind.annotation.ResponseBody;
+	import org.springframework.web.servlet.ModelAndView;
+
+	@Controller
+	public class HelloController {
 	
 	@RequestMapping("/hello")
 	public String hello() {
@@ -371,13 +371,14 @@ public class HelloController {
 	}
 
 
-​	
+	
 	@RequestMapping("/hello6") /// redirect
 	public String hello6() {
 		System.out.println("hello6() called");
 		return "redirect:/hello";
 	}
 }
+
 
 '''
 
