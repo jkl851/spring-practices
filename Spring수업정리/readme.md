@@ -324,7 +324,7 @@ P(lain) O(ld) J(ava) O(bject)
 
 ### HelloController.java
 
-'''java
+
 
 
 	package com.douzone.hellospring.controller;
@@ -377,10 +377,10 @@ P(lain) O(ld) J(ava) O(bject)
 		System.out.println("hello6() called");
 		return "redirect:/hello";
 	}
-}
 
 
-'''
+
+
 
 
 
