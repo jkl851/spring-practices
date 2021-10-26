@@ -5,22 +5,27 @@
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
-	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
-	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
-	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-<<<<<<< HEAD
-	
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/board/**"/>
-			<bean class="com.douzone.hellospring.Interceptor.MyInterceptor01"/>
+			<bean class="com.douzone.hellospring.interceptor.MyInterceptor01"/>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/guestbook/**"/>
+			<bean class="com.douzone.hellospring.interceptor.MyInterceptor02"/>
 		</mvc:interceptor>
 	</mvc:interceptors>
-=======
-
->>>>>>> branch 'master' of https://github.com/jkl851/spring-practices.git
+	
 	<context:annotation-config />
 	<context:component-scan base-package="com.douzone.hellospring.controller" />
+	
 
 </beans>
