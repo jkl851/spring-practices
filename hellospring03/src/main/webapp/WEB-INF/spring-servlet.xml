@@ -9,6 +9,7 @@
 	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
 	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+<<<<<<< HEAD
 	
 	<mvc:interceptors>
 		<mvc:interceptor>
@@ -16,6 +17,9 @@
 			<bean class="com.douzone.hellospring.Interceptor.MyInterceptor01"/>
 		</mvc:interceptor>
 	</mvc:interceptors>
+=======
+
+>>>>>>> branch 'master' of https://github.com/jkl851/spring-practices.git
 	<context:annotation-config />
 	<context:component-scan base-package="com.douzone.hellospring.controller" />
 

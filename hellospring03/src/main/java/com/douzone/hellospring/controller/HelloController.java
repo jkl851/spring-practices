@@ -1,5 +1,6 @@
 package com.douzone.hellospring.controller;
 
+<<<<<<< HEAD
 import java.io.IOException;
 import java.io.Writer;
 
@@ -63,5 +64,16 @@ public class HelloController {
 			Writer out) throws IOException {
 		String no = req.getParameter("n");
 		out.write("<h1>Hello World<h1>");
+=======
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HelloController {
+	
+	@RequestMapping("/hello")
+	public String hello() {
+		return "/WEB-INF/views/hello.jsp";
+>>>>>>> branch 'master' of https://github.com/jkl851/spring-practices.git
 	}
 }
